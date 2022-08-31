@@ -1,0 +1,16 @@
+.accordion-personal-details {
+  font-weight: bold;
+}
+
+.table-title {
+padding-bottom: 15px;
+background: #299be4;
+color: #fff;
+padding: 5px 10px;
+border-radius: 3px 3px 0 0;
+}
+.table-title h2 {
+margin: 5px 0 0;
+font-size: 24px;
+}
+

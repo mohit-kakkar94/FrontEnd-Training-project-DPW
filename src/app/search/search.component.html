@@ -1,0 +1,47 @@
+<div class="container text-center">
+
+  <form (ngSubmit)="onSubmit(searchForm)" #searchForm = "ngForm">
+
+    <div class="row">
+
+      <div class="col">
+        <input class="form-control" type="text" name="name" placeholder="Name"
+               [(ngModel)] = "studentName" ngModel>
+      </div>
+
+      <div class="col">
+        <input class="form-control" type="email" name="email" placeholder="Email"
+               #email = "ngModel" [(ngModel)] = "studentEmail" ngModel email>
+        <span class="help-block" *ngIf="email.errors?.email && email.touched">
+          Email is invalid!
+        </span>
+      </div>
+
+      <div class="col">
+        <select class="form-control" name="department" ngModel>
+          <option [value]="iValDep" disabled selected>Department</option>
+          <option *ngFor="let department of departments" [value]="department">
+            {{department}}
+          </option>
+        </select>
+      </div>
+
+      <div class="col">
+        <select class="form-control" name="college" ngModel>
+          <option [value]="iValCol" disabled selected>College</option>
+          <option *ngFor="let college of colleges" [value]="college">
+            {{college}}
+          </option>
+        </select>
+      </div>
+
+      <div class="col">
+        <button routerLink = "list" class="btn btn-primary" type="submit">Search</button>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
+

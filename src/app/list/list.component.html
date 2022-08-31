@@ -1,0 +1,10 @@
+<div class="container text-center">
+
+  <h4>Results</h4>
+  <ul class="list-group">
+    <p *ngIf = "students.length === 0">No results to display!</p>
+    <app-item *ngFor = "let student of students" [student] = "student">
+    </app-item>
+  </ul>
+
+</div>
